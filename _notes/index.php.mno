@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsClass" value="name:cid;datatype:int,name:cname;datatype:string,name:sort;datatype:string" />
+	<infoitem key="UD_rsHot" value="name:sid;datatype:int,name:name;datatype:string,name:img;datatype:string" />
+</info>
