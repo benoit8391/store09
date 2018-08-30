@@ -32,7 +32,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysql_select_db($database_cnStore, $cnStore);
-$query_rsClass = "SELECT * FROM sclass ORDER BY sort ASC";
+$query_rsClass = "SELECT * FROM sclass ORDER BY cid ASC";
 $rsClass = mysql_query($query_rsClass, $cnStore) or die(mysql_error());
 $row_rsClass = mysql_fetch_assoc($rsClass);
 $totalRows_rsClass = mysql_num_rows($rsClass);
@@ -74,13 +74,13 @@ $totalRows_rsHot = mysql_num_rows($rsHot);
     <div class="leftboard">
       <div align="center"> <img src="images/board_top2.gif" width="166" height="63" /> 
         <?php do { ?>
-          <img src="imgshirt/<?php echo $row_rsHot['img']; ?>s.jpg" width="109" height="91" title="<?php echo $row_rsHot['name']; ?>" />
+          <img src="imgshirt/<?php echo $row_rsHot['img']; ?>s.jpg" title="<?php echo $row_rsHot['name']; ?>" />
           <?php } while ($row_rsHot = mysql_fetch_assoc($rsHot)); ?>
         <div class="bottom"><img src="images/board_bottom.gif" width="166" height="26" /></div>
       </div>
     </div>
   </div>
-  <div id="containright"><iframe src="special.php" name="tsFrame" width="100%" height="900px" scrolling="no" frameborder="0"></iframe></div>
+  <div id="containright"> <iframe src="special.php" name="tsFrame" width="100%" height="900px" scrolling="no" frameborder="0"></iframe></div>
   <div class="clearboth"></div>
 </div>
 </body>
